@@ -58,7 +58,7 @@
                                              alt="{{ $story->author }}">
                                     @endif
                                     <div class="text-base">
-                                        <div class="font-semibold text-gray-900">{{ $story->author }}</div>
+                                        <div class="font-semibold text-gray-900 before:content-['–_']">{{ $story->author }}</div>
                                         @if($story->job)
                                             <div class="mt-1 text-gray-500">{{ $story->job }}</div>
                                         @endif
