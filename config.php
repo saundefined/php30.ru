@@ -4,12 +4,11 @@ return [
     'production' => false,
     'baseUrl' => '',
     'title' => 'PHP 30',
-    'description' => 'PHP turns 30!',
+    'description' => 'PHP исполняется 30 лет!',
     'getText' => function ($page) {
-        $content = preg_split('/<!-- more -->/m', $page->getContent(), 2);
         return trim(
             strip_tags(
-                preg_replace(['/<pre>[\w\W]*?<\/pre>/', '/<h\d>[\w\W]*?<\/h\d>/'], '', $content[0]),
+                preg_replace(['/<pre>[\w\W]*?<\/pre>/', '/<h\d>[\w\W]*?<\/h\d>/'], '', $page->getContent()),
                 '<code>'
             )
         );
