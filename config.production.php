@@ -2,5 +2,5 @@
 
 return [
     'production' => true,
-    'baseUrl' => 'https://php30.website',
+    'baseUrl' => 'https://php30.ru',
 ];

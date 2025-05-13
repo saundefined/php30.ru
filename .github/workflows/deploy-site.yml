@@ -32,7 +32,7 @@ jobs:
         run: npm run prod
 
       - name: Create CNAME File
-        run: echo "php30.website" >> build_production/CNAME
+        run: echo "php30.ru" >> build_production/CNAME
 
       - name: Stage Files
         run: git add -f build_production
