@@ -23,8 +23,7 @@
             <div class="mx-auto max-w-7xl">
                 <div class="relative mt-16 grid max-h-[150vh] grid-cols-1 items-start gap-8 overflow-hidden px-4 sm:mt-20 md:grid-cols-2 lg:grid-cols-3">
                     @foreach ($acronyms->split(3) as $column)
-                        <div class="animate-marquee space-y-8 py-4"
-                             style="--marquee-duration: {{ $column->count() * 1000 }}ms;">
+                        <div class="animate-marquee space-y-8 py-4">
                             @foreach ($column as $acronym)
                                 <figure class="animate-fade-in rounded-3xl bg-white p-6 opacity-0 shadow-md shadow-gray-900/5"
                                         style="animation-delay: {{ collect(['0s', '0.1s', '0.2s', '0.3s', '0.4s', '0.5s'])->random() }};">
