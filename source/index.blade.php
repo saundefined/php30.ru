@@ -21,20 +21,16 @@
     <section>
         @if($acronyms->count() > 0)
             <div class="mx-auto max-w-7xl">
-                <div class="relative mt-16 grid max-h-[150vh] grid-cols-1 items-start gap-8 overflow-hidden px-4 sm:mt-20 md:grid-cols-2 lg:grid-cols-3">
-                    @foreach ($acronyms->split(3) as $column)
-                        <div class="animate-marquee space-y-8 py-4">
-                            @foreach ($column as $acronym)
-                                <figure class="animate-fade-in rounded-3xl bg-white p-6 opacity-0 shadow-md shadow-gray-900/5"
-                                        style="animation-delay: {{ collect(['0s', '0.1s', '0.2s', '0.3s', '0.4s', '0.5s'])->random() }};">
-                                    <blockquote class="text-gray-900">
-                                        <p class="mt-4 text-lg/6 font-semibold before:content-['“'] after:content-['”']">{!! $acronym->getText() !!}</p>
-                                    </blockquote>
-                                    <figcaption
-                                            class="mt-3 text-sm text-gray-600 before:content-['–_']">{{ $acronym->author }}</figcaption>
-                                </figure>
-                            @endforeach
-                        </div>
+                <div class="relative -mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-3 space-y-8 py-4">
+                    @foreach ($acronyms as $acronym)
+                        <figure class="animate-fade-in rounded-3xl bg-white p-6 opacity-0 shadow-md shadow-gray-900/5"
+                                style="animation-delay: {{ collect(['0s', '0.1s', '0.2s', '0.3s', '0.4s', '0.5s'])->random() }};">
+                            <blockquote class="text-gray-900">
+                                <p class="mt-4 text-lg/6 font-semibold before:content-['“'] after:content-['”']">{!! $acronym->getText() !!}</p>
+                            </blockquote>
+                            <figcaption
+                                    class="mt-3 text-sm text-gray-600 before:content-['–_']">{{ $acronym->author }}</figcaption>
+                        </figure>
                     @endforeach
                     <div class="pointer-events-none absolute inset-x-0 top-0 h-32 bg-linear-to-b from-gray-50"></div>
                     <div class="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-gray-50"></div>
