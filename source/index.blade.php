@@ -12,7 +12,7 @@
             </div>
 
             <div class="mt-8 text-center">
-                <a href="https://forms.gle/X2uw61xAxhX88uiQ6" target="_blank" rel="noopener noreferrer"
+                <a href="https://github.com/saundefined/php30.ru" target="_blank" rel="noopener noreferrer"
                    class="rounded-3xl bg-[#4F5B93] px-6 py-4 text-sm font-semibold text-white shadow-xs hover:bg-[#793862]">
                     Прислать свой вариант</a>
             </div>
